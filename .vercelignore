@@ -1,0 +1,13 @@
+# Source and working files — not part of the published site.
+# The published resume is assets/Mumtaz_Ahmad_Resume.pdf, which index.html links to.
+Mumtaz_Ahmad_NEW.docx
+Mumtaz_Ahmad_NEW.pdf
+resume_mumtaz_ahmad.md
+main.jpg
+shared image.jpg
+img_ref/
+
+# Tooling
+.agents/
+.claude/
+skills-lock.json
