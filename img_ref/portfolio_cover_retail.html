@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:1200px;height:675px;overflow:hidden;}
+  .card{
+    width:1200px;height:675px;position:relative;
+    font-family:"Segoe UI",Arial,sans-serif;color:#fff;
+    background:radial-gradient(1200px 700px at 78% 18%, #2563eb 0%, #1e3a8a 42%, #0b1220 100%);
+    display:flex;flex-direction:column;justify-content:center;
+    padding:0 90px;
+  }
+  /* subtle dotted grid */
+  .card::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(rgba(255,255,255,.10) 1.4px, transparent 1.4px);
+    background-size:34px 34px;opacity:.5;
+  }
+  .glow{position:absolute;width:520px;height:520px;border-radius:50%;
+    right:-140px;top:-160px;background:rgba(96,165,250,.35);filter:blur(90px);}
+  .content{position:relative;z-index:2;max-width:900px;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;
+    font-size:15px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;
+    color:#bfdbfe;margin-bottom:22px;
+  }
+  .dot{width:9px;height:9px;border-radius:50%;background:#22c55e;box-shadow:0 0 12px #22c55e;}
+  h1{font-size:62px;line-height:1.08;font-weight:800;letter-spacing:-.5px;margin-bottom:20px;}
+  h1 .accent{color:#93c5fd;}
+  .sub{font-size:22px;line-height:1.5;color:#dbeafe;font-weight:400;max-width:760px;margin-bottom:34px;}
+  .chips{display:flex;flex-wrap:wrap;gap:12px;}
+  .chip{
+    font-size:17px;font-weight:600;color:#e0edff;
+    border:1.5px solid rgba(147,197,253,.55);border-radius:9px;
+    padding:9px 18px;background:rgba(59,130,246,.14);
+    backdrop-filter:blur(4px);
+  }
+  .footer{position:absolute;left:90px;bottom:44px;z-index:2;
+    display:flex;align-items:center;gap:14px;color:#93c5fd;font-size:17px;font-weight:600;letter-spacing:.5px;}
+  .footer .line{width:46px;height:2px;background:#3b82f6;}
+  .badge{position:absolute;right:90px;bottom:44px;z-index:2;
+    font-size:15px;color:#cbd5e1;font-weight:500;opacity:.85;}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="glow"></div>
+    <div class="content">
+      <div class="eyebrow"><span class="dot"></span> Enterprise Web Application &middot; Retail</div>
+      <h1>Click &amp; Collect<br><span class="accent">Order-Management Platform</span></h1>
+      <div class="sub">Real-time warehouse &amp; in-store order fulfilment &mdash; barcode/QR scanning, live updates over WebSockets, secure encrypted payloads, and accessible, high-performance UI.</div>
+      <div class="chips">
+        <span class="chip">Angular</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">RxJS</span>
+        <span class="chip">WebSockets</span>
+        <span class="chip">REST API</span>
+        <span class="chip">Angular Material</span>
+      </div>
+    </div>
+    <div class="footer"><span class="line"></span> Mumtaz Ahmad &middot; Full-Stack Engineer</div>
+    <div class="badge">Client confidential &mdash; NDA</div>
+  </div>
+</body>
+</html>

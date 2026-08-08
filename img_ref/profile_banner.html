@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:1920px;height:300px;overflow:hidden;}
+  .banner{
+    position:relative;width:1920px;height:300px;
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:
+      radial-gradient(700px 380px at 84% 55%, rgba(88,52,160,.55) 0%, rgba(20,16,48,0) 60%),
+      radial-gradient(600px 300px at 6% 18%, rgba(40,70,150,.35) 0%, rgba(10,14,32,0) 55%),
+      linear-gradient(105deg, #05070f 0%, #0a1024 45%, #0c0a22 100%);
+    overflow:hidden;
+  }
+  /* faint plexus dots */
+  .banner::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(rgba(120,150,220,.10) 1.2px, transparent 1.2px);
+    background-size:40px 40px;opacity:.6;
+  }
+  .content{position:absolute;left:400px;top:0;width:1010px;height:300px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:3;}
+  .title{
+    font-family:Georgia,"Times New Roman",serif;font-weight:700;
+    font-size:46px;line-height:1;letter-spacing:.5px;
+    color:#ead9b0;text-shadow:0 2px 18px rgba(0,0,0,.5);
+    white-space:nowrap;
+  }
+  .title .hl{color:#ff4d67;text-shadow:0 0 22px rgba(221,0,49,.55);}
+  .subtitle{
+    margin-top:16px;font-size:24px;font-weight:400;letter-spacing:.3px;
+    color:#c6d2ea;text-align:center;
+  }
+  .subtitle b{color:#8fb0ff;font-weight:600;}
+  .pills{margin-top:24px;display:flex;gap:14px;}
+  .pill{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:10px 20px;border-radius:11px;
+    background:rgba(255,255,255,.05);border:1px solid rgba(150,175,230,.28);
+    color:#dbe4f7;font-size:20px;font-weight:500;
+    backdrop-filter:blur(3px);
+  }
+  .pill .ic{font-size:18px;filter:grayscale(.15);}
+  .pill.ng{background:linear-gradient(135deg,#dd0031,#b3002a);border-color:#ff5570;
+    color:#fff;font-weight:700;box-shadow:0 0 22px rgba(221,0,49,.45);}
+  /* right network graphic */
+  .net{position:absolute;right:20px;top:0;width:520px;height:300px;z-index:2;}
+  .lbl{position:absolute;font-weight:800;letter-spacing:1px;z-index:4;
+    text-shadow:0 0 16px currentColor;}
+</style>
+</head>
+<body>
+  <div class="banner">
+    <div class="content">
+      <div class="title"><span class="hl">Angular</span> Developer &amp; Front-End Architect</div>
+      <div class="subtitle">Building Scalable <b style="color:#ff7b8c">Angular 21</b>, <b>React</b> &amp; <b>Node.js</b> Applications &amp; Enterprise UIs</div>
+      <div class="pills">
+        <span class="pill ng"><span class="ic">🅰️</span> Angular 21</span>
+        <span class="pill"><span class="ic">⚛️</span> React</span>
+        <span class="pill"><span class="ic">🟢</span> Node.js</span>
+        <span class="pill"><span class="ic">🔗</span> REST APIs</span>
+        <span class="pill"><span class="ic">🎨</span> UI / UX</span>
+      </div>
+    </div>
+
+    <svg class="net" viewBox="0 0 520 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#8b5cf6" stop-opacity=".55"/>
+          <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="270" cy="150" r="150" fill="url(#glow)"/>
+      <!-- arcs -->
+      <circle cx="270" cy="150" r="118" stroke="#3b4a86" stroke-opacity=".55" stroke-width="1.5"/>
+      <circle cx="270" cy="150" r="150" stroke="#2a356a" stroke-opacity=".45" stroke-width="1.5" stroke-dasharray="4 7"/>
+      <!-- connective lines -->
+      <g stroke="#6d7fd6" stroke-opacity=".55" stroke-width="1.4">
+        <path d="M270 150 L200 70"/><path d="M270 150 L350 70"/>
+        <path d="M270 150 L160 150"/><path d="M270 150 L380 150"/>
+        <path d="M270 150 L200 235"/><path d="M270 150 L350 235"/>
+        <path d="M200 70 L350 70"/><path d="M160 150 L200 235"/>
+        <path d="M380 150 L350 235"/><path d="M350 70 L380 150"/>
+        <path d="M200 70 L160 150"/>
+      </g>
+      <!-- nodes -->
+      <g>
+        <circle cx="270" cy="150" r="9" fill="#e9dab4"/>
+        <circle cx="200" cy="70"  r="9" fill="#ff4d67"/>
+        <circle cx="350" cy="70"  r="6" fill="#a855f7"/>
+        <circle cx="160" cy="150" r="6" fill="#38bdf8"/>
+        <circle cx="380" cy="150" r="6" fill="#ec4899"/>
+        <circle cx="200" cy="235" r="6" fill="#22c55e"/>
+        <circle cx="350" cy="235" r="6" fill="#f59e0b"/>
+      </g>
+    </svg>
+
+    <!-- floating tech labels over the network -->
+    <div class="lbl" style="right:388px;top:40px;color:#ff5d73;font-size:23px;">ANGULAR</div>
+    <div class="lbl" style="right:150px;top:44px;color:#c084fc;font-size:19px;">REACT</div>
+    <div class="lbl" style="right:452px;top:132px;color:#4fc3f7;font-size:18px;">TS</div>
+    <div class="lbl" style="right:96px;top:130px;color:#f472b6;font-size:19px;">NODE.JS</div>
+    <div class="lbl" style="right:388px;top:222px;color:#4ade80;font-size:18px;">RxJS</div>
+    <div class="lbl" style="right:150px;top:222px;color:#fbbf24;font-size:18px;">API</div>
+    <div class="lbl" style="right:236px;top:150px;color:#ead9b0;font-size:22px;">UI</div>
+  </div>
+</body>
+</html>

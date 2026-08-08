@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "portfolio": {
+      "source": "anthropics/claude-for-legal",
+      "sourceType": "github",
+      "skillPath": "ip-legal/skills/portfolio/SKILL.md",
+      "computedHash": "af607317b08de7e43dd9c8b4a549695305a32d9972cb28a665096cc42f4ced3d"
+    }
+  }
+}

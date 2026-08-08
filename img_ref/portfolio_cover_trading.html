@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:1200px;height:675px;overflow:hidden;}
+  .card{
+    width:1200px;height:675px;position:relative;
+    font-family:"Segoe UI",Arial,sans-serif;color:#fff;
+    background:radial-gradient(1200px 700px at 78% 18%, #0d9488 0%, #115e59 42%, #071617 100%);
+    display:flex;flex-direction:column;justify-content:center;
+    padding:0 90px;
+  }
+  .card::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(rgba(255,255,255,.10) 1.4px, transparent 1.4px);
+    background-size:34px 34px;opacity:.5;
+  }
+  .glow{position:absolute;width:520px;height:520px;border-radius:50%;
+    right:-140px;top:-160px;background:rgba(45,212,191,.35);filter:blur(90px);}
+  .content{position:relative;z-index:2;max-width:900px;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;
+    font-size:15px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;
+    color:#99f6e4;margin-bottom:22px;
+  }
+  .dot{width:9px;height:9px;border-radius:50%;background:#22c55e;box-shadow:0 0 12px #22c55e;}
+  h1{font-size:60px;line-height:1.08;font-weight:800;letter-spacing:-.5px;margin-bottom:20px;}
+  h1 .accent{color:#5eead4;}
+  .sub{font-size:22px;line-height:1.5;color:#ccfbf1;font-weight:400;max-width:760px;margin-bottom:34px;}
+  .chips{display:flex;flex-wrap:wrap;gap:12px;}
+  .chip{
+    font-size:17px;font-weight:600;color:#e6fffb;
+    border:1.5px solid rgba(94,234,212,.55);border-radius:9px;
+    padding:9px 18px;background:rgba(20,184,166,.16);
+    backdrop-filter:blur(4px);
+  }
+  .footer{position:absolute;left:90px;bottom:44px;z-index:2;
+    display:flex;align-items:center;gap:14px;color:#5eead4;font-size:17px;font-weight:600;letter-spacing:.5px;}
+  .footer .line{width:46px;height:2px;background:#14b8a6;}
+  .badge{position:absolute;right:90px;bottom:44px;z-index:2;
+    font-size:15px;color:#cbd5e1;font-weight:500;opacity:.85;}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="glow"></div>
+    <div class="content">
+      <div class="eyebrow"><span class="dot"></span> Enterprise Web Application &middot; Capital Markets</div>
+      <h1>Buyside / Sellside<br><span class="accent">Trading Portal</span></h1>
+      <div class="sub">Two deployable Angular apps in one Nx monorepo sharing modular libraries &mdash; complex NgRx state, Highcharts dashboards, multi-step wizards, and SCSS design tokens built for scale.</div>
+      <div class="chips">
+        <span class="chip">Angular</span>
+        <span class="chip">Nx Monorepo</span>
+        <span class="chip">NgRx</span>
+        <span class="chip">Highcharts</span>
+        <span class="chip">TypeScript</span>
+      </div>
+    </div>
+    <div class="footer"><span class="line"></span> Mumtaz Ahmad &middot; Full-Stack Engineer</div>
+    <div class="badge">Client confidential &mdash; NDA</div>
+  </div>
+</body>
+</html>
